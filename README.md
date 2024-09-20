@@ -148,6 +148,7 @@ Compared to the LFQ method employed in Magvit-v2, which performs binary encoding
 The specific process is as follows:
 
 Assume $x$ is the scalar of one channel to be quantized, $b_0$ is the left endpoint of the quantization interval, $\left[ l_0, l_1, l_2, \cdots  \right]$ represents the learnable lengths of each bin, and $n$ represents the interval in the output space. The forward propagation process of this quantization function is described by the following equation:
+
 $$
 \begin{equation}
 y=
@@ -160,6 +161,7 @@ y=
 \label{f-1-1}
 \end{equation}
 $$
+
 
 $$
 \begin{equation}
