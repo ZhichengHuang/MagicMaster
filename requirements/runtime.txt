@@ -1,0 +1,22 @@
+av
+av==8.0.3; python_version < '3.7'
+click  # required by magicmaster/utils/io_utils.py
+addict
+einops
+lpips
+numpy
+yapf
+attrs
+imageio
+decord
+pytorch-fast-transformers
+kornia
+# MMCV depends opencv-python instead of headless, thus we install opencv-python
+# Due to a bug from upstream, we skip this two version
+# https://github.com/opencv/opencv-python/issues/602
+# https://github.com/opencv/opencv/issues/21366
+# It seems to be fixed in https://github.com/opencv/opencv/pull/21382
+opencv-python!=4.5.5.62,!=4.5.5.64
+Pillow
+tensorboard
+transformers>=4.27.4
