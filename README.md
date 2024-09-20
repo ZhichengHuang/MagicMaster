@@ -149,34 +149,11 @@ The specific process is as follows:
 
 Assume $x$ is the scalar of one channel to be quantized, $b_0$ is the left endpoint of the quantization interval, $\left[ l_0, l_1, l_2, \cdots  \right]$ represents the learnable lengths of each bin, and $n$ represents the interval in the output space. The forward propagation process of this quantization function is described by the following equation:
 
-$$
-\begin{equation}
-y=
-\begin{cases}
--1.0, & x<b_0+\frac{l_0}{2} \\
--1.0 +n, & x\geq b_0+\frac{l_0}{2} \\
--1.0 +2n, & x\geq b_0+l_0+\frac{l_1}{2} \\
-\cdots
-\end{cases}
-\label{f-1-1}
-\end{equation}
-$$
 
 
-$$
-\begin{equation}
-f(x)=\begin{cases}
--1.0，& x<s_0 \\
-\frac{n}{l_0}\cdot (x-b_0)+(b_0+n)-n, & x \geq b_0 \\
-\frac{n}{l_1} \cdot[x-(b_o+l_0)]+(b_0+2n)-n, & x \geq b_0+l_0 \\
-\frac{n}{l_2} \cdot[x-(b_o+l_0+l_1)]+(b_0+3n)-n, & x \geq b_0+l_0 +l_1 \\
-\cdots
-\end{cases}
-\label{f-1-2}
-\end{equation}
-$$
+![](./assets/eq1.png)
 
-
+![](./assets/eq2.png)
 
 ## Acknowledgement
 
